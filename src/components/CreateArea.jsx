@@ -29,7 +29,7 @@ function CreateArea(props) {
     event.preventDefault();
   }
   function clickHandler() {
-    setIsClicked(prevState => !prevState);
+    setIsClicked(true);
   }
 
   return (
