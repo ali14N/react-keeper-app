@@ -6,7 +6,6 @@ import CreateArea from "./CreateArea";
 
 function App() {
   const [notes, setNotes] = useState(JSON.parse(localStorage.getItem('notes')) || []);
-  console.log(notes)
 
   function addNote(newNote) {
     setNotes(prevNotes => {
@@ -17,9 +16,7 @@ function App() {
   useEffect(() => {
     localStorage.setItem('notes', JSON.stringify(notes));
   }, [notes])
-  function setlocalStorage() {
 
-  }
   function deleteNote(id) {
     setNotes(prevNotes => {
       return prevNotes.filter((noteItem, index) => {
@@ -45,7 +42,7 @@ function App() {
           />
         );
       })}
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
